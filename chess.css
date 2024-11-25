@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div.wrap {
+    position: relative;
+    width: 576px;
+    height: 576px;
+    margin: 100px auto;
+}
+div.board {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+}
+div.board > span {
+    float: left;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000;
+    text-align: center;
+    cursor: pointer;
+    background-size: 100% 100%;
+}
+div.board > span:hover {
+    background-color: #ddd;
+}
+div.board > span.path {
+    background-color: #9dff88;
+}
+div.board > span.eat {
+    background-color: #ffacac !important;
+}
+div.board > span.blk {
+    background-color: #8f5736;
+}
+
+/* Chess piece classes */
+.b_pawn, .b_rook, .b_knight, .b_bishop, .b_queen, .b_king,
+.w_pawn, .w_rook, .w_knight, .w_bishop, .w_queen, .w_king {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.b_pawn {background-image: url('./cs_img/b_pawn.png');}
+.b_rook {background-image: url('./cs_img/b_rook.png');}
+.b_knight {background-image: url('./cs_img/b_knight.png');}
+.b_bishop {background-image: url('./cs_img/b_bishop.png');}
+.b_queen {background-image: url('./cs_img/b_queen.png');}
+.b_king {background-image: url('./cs_img/b_king.png');}
+.w_pawn {background-image: url('./cs_img/w_pawn.png');}
+.w_rook {background-image: url('./cs_img/w_rook.png');}
+.w_knight {background-image: url('./cs_img/w_knight.png');}
+.w_bishop {background-image: url('./cs_img/w_bishop.png');}
+.w_queen {background-image: url('./cs_img/w_queen.png');}
+.w_king {background-image: url('./cs_img/w_king.png');}
+
+/* result menu */
+div.result {
+    position: absolute;
+    width: 100%;
+    padding: 30px 0;
+    background-color: #777;
+    top: 50%;
+    transform:translate(0, -50%);
+    display: none;
+}
+
+div.result > * {
+    font-weight: bold;
+    user-select: none;
+}
+
+div.result > p.result {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.result > span.btn {
+    background-color: #9dff88;
+    display: inline-block;
+    padding: 5px;
+    font-size: 20px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+}
